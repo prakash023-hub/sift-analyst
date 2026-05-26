@@ -1,0 +1,2 @@
+55f9facaec8cf1d1bf1f8c04f3d287a4  /mnt/terry/R54402.EXE
+790856e8ae34f0ac3eb40e031cf7a47a  /mnt/terry/vnc-4_1_3-x86_win32.exe
