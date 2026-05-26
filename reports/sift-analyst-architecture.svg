@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620" viewBox="0 0 1100 620" font-family="'Segoe UI', 'Liberation Sans', Arial, sans-serif">
+
+  <!-- Background -->
+  <rect width="1100" height="620" fill="#0d1117" rx="12"/>
+
+  <!-- Title -->
+  <text x="550" y="42" text-anchor="middle" fill="#e6edf3" font-size="20" font-weight="700" letter-spacing="1">SIFT-Analyst — Autonomous IR Agent Flow</text>
+  <text x="550" y="62" text-anchor="middle" fill="#8b949e" font-size="12">SANS FOR508 · FINDEVIL-001 · Stark Research Labs</text>
+
+  <!-- ─── LANE BACKGROUNDS ─── -->
+  <!-- Evidence lane -->
+  <rect x="20" y="85" width="160" height="480" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="100" y="107" text-anchor="middle" fill="#58a6ff" font-size="11" font-weight="600">EVIDENCE</text>
+
+  <!-- Mounting lane -->
+  <rect x="195" y="85" width="160" height="480" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="275" y="107" text-anchor="middle" fill="#58a6ff" font-size="11" font-weight="600">MOUNT</text>
+
+  <!-- Analysis lane -->
+  <rect x="370" y="85" width="160" height="480" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="450" y="107" text-anchor="middle" fill="#58a6ff" font-size="11" font-weight="600">ANALYSIS</text>
+
+  <!-- ML lane -->
+  <rect x="545" y="85" width="160" height="480" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="625" y="107" text-anchor="middle" fill="#58a6ff" font-size="11" font-weight="600">ML SCORING</text>
+
+  <!-- Agent lane -->
+  <rect x="720" y="85" width="180" height="480" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="810" y="107" text-anchor="middle" fill="#58a6ff" font-size="11" font-weight="600">CLAUDE AGENT</text>
+
+  <!-- Report lane -->
+  <rect x="915" y="85" width="165" height="480" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="997" y="107" text-anchor="middle" fill="#58a6ff" font-size="11" font-weight="600">OUTPUT</text>
+
+  <!-- ─── NODE HELPER: rounded rect + icon area ─── -->
+
+  <!-- ── NODE 1: E01 Image ── -->
+  <rect x="30" y="135" width="140" height="72" rx="8" fill="#1c2b3a" stroke="#388bfd" stroke-width="1.5"/>
+  <rect x="30" y="135" width="140" height="18" rx="8" fill="#388bfd" opacity="0.25"/>
+  <text x="100" y="149" text-anchor="middle" fill="#79c0ff" font-size="10" font-weight="600">E01 IMAGE</text>
+  <text x="100" y="167" text-anchor="middle" fill="#c9d1d9" font-size="10">base-rd01-cdrive.E01</text>
+  <text x="100" y="180" text-anchor="middle" fill="#8b949e" font-size="9">base-dc-cdrive.E01</text>
+  <text x="100" y="193" text-anchor="middle" fill="#8b949e" font-size="9">rd01-memory.img</text>
+
+  <!-- ── NODE 2: EWF Mount ── -->
+  <rect x="205" y="135" width="140" height="72" rx="8" fill="#1c2b1c" stroke="#3fb950" stroke-width="1.5"/>
+  <rect x="205" y="135" width="140" height="18" rx="8" fill="#3fb950" opacity="0.25"/>
+  <text x="275" y="149" text-anchor="middle" fill="#56d364" font-size="10" font-weight="600">EWF MOUNT</text>
+  <text x="275" y="167" text-anchor="middle" fill="#c9d1d9" font-size="10">ewfmount → /mnt/ewf_rd01</text>
+  <text x="275" y="180" text-anchor="middle" fill="#8b949e" font-size="9">mount -o ro,loop,noatime</text>
+  <text x="275" y="193" text-anchor="middle" fill="#8b949e" font-size="9">/mnt/rd01  /mnt/dc01</text>
+
+  <!-- ── NODE 3a: Sleuth Kit ── -->
+  <rect x="380" y="122" width="140" height="58" rx="8" fill="#1e1c2b" stroke="#bc8cff" stroke-width="1.5"/>
+  <rect x="380" y="122" width="140" height="16" rx="8" fill="#bc8cff" opacity="0.25"/>
+  <text x="450" y="134" text-anchor="middle" fill="#d2a8ff" font-size="10" font-weight="600">SLEUTH KIT</text>
+  <text x="450" y="149" text-anchor="middle" fill="#c9d1d9" font-size="9">fls / icat / ils / blkls</text>
+  <text x="450" y="162" text-anchor="middle" fill="#8b949e" font-size="9">mactime · tsk_recover</text>
+
+  <!-- ── NODE 3b: EZ Tools ── -->
+  <rect x="380" y="192" width="140" height="58" rx="8" fill="#1e1c2b" stroke="#bc8cff" stroke-width="1.5"/>
+  <rect x="380" y="192" width="140" height="16" rx="8" fill="#bc8cff" opacity="0.25"/>
+  <text x="450" y="204" text-anchor="middle" fill="#d2a8ff" font-size="10" font-weight="600">EZ TOOLS</text>
+  <text x="450" y="219" text-anchor="middle" fill="#c9d1d9" font-size="9">MFTECmd · EvtxECmd</text>
+  <text x="450" y="232" text-anchor="middle" fill="#8b949e" font-size="9">AmcacheParser · RECmd</text>
+
+  <!-- ── NODE 3c: Volatility 3 ── -->
+  <rect x="380" y="262" width="140" height="58" rx="8" fill="#1e1c2b" stroke="#bc8cff" stroke-width="1.5"/>
+  <rect x="380" y="262" width="140" height="16" rx="8" fill="#bc8cff" opacity="0.25"/>
+  <text x="450" y="274" text-anchor="middle" fill="#d2a8ff" font-size="10" font-weight="600">VOLATILITY 3</text>
+  <text x="450" y="289" text-anchor="middle" fill="#c9d1d9" font-size="9">pstree · cmdline · netstat</text>
+  <text x="450" y="302" text-anchor="middle" fill="#8b949e" font-size="9">dlllist · getsids · malfind</text>
+
+  <!-- ── NODE 3d: Plaso ── -->
+  <rect x="380" y="332" width="140" height="58" rx="8" fill="#1e1c2b" stroke="#bc8cff" stroke-width="1.5"/>
+  <rect x="380" y="332" width="140" height="16" rx="8" fill="#bc8cff" opacity="0.25"/>
+  <text x="450" y="344" text-anchor="middle" fill="#d2a8ff" font-size="10" font-weight="600">PLASO</text>
+  <text x="450" y="359" text-anchor="middle" fill="#c9d1d9" font-size="9">log2timeline.py · psort.py</text>
+  <text x="450" y="372" text-anchor="middle" fill="#8b949e" font-size="9">supertimeline (UTC)</text>
+
+  <!-- ── NODE 4: ML Anomaly Scorer ── -->
+  <rect x="555" y="185" width="140" height="100" rx="8" fill="#2b1c1c" stroke="#f78166" stroke-width="1.5"/>
+  <rect x="555" y="185" width="140" height="18" rx="8" fill="#f78166" opacity="0.25"/>
+  <text x="625" y="199" text-anchor="middle" fill="#ffa198" font-size="10" font-weight="600">ML ANOMALY SCORER</text>
+  <text x="625" y="217" text-anchor="middle" fill="#c9d1d9" font-size="9">IsolationForest</text>
+  <text x="625" y="230" text-anchor="middle" fill="#c9d1d9" font-size="9">feature extraction</text>
+  <text x="625" y="243" text-anchor="middle" fill="#8b949e" font-size="9">process · network · file</text>
+  <text x="625" y="256" text-anchor="middle" fill="#8b949e" font-size="9">→ anomaly score [-1,+1]</text>
+  <text x="625" y="270" text-anchor="middle" fill="#ffa198" font-size="9" font-weight="600">★ unique differentiator</text>
+
+  <!-- ── NODE 5: Claude Code Agent ── -->
+  <rect x="730" y="150" width="160" height="110" rx="8" fill="#1c2318" stroke="#56d364" stroke-width="2"/>
+  <rect x="730" y="150" width="160" height="20" rx="8" fill="#56d364" opacity="0.3"/>
+  <text x="810" y="165" text-anchor="middle" fill="#56d364" font-size="10" font-weight="700">CLAUDE CODE AGENT</text>
+  <text x="810" y="183" text-anchor="middle" fill="#c9d1d9" font-size="9">claude-sonnet-4-6</text>
+  <text x="810" y="196" text-anchor="middle" fill="#c9d1d9" font-size="9">orchestrates all skills</text>
+  <text x="810" y="209" text-anchor="middle" fill="#8b949e" font-size="9">tool use · chain-of-thought</text>
+  <text x="810" y="222" text-anchor="middle" fill="#8b949e" font-size="9">reads exports/  writes reports/</text>
+  <text x="810" y="240" text-anchor="middle" fill="#56d364" font-size="9" font-weight="600">evidence read-only policy</text>
+
+  <!-- ── NODE 6: Self-Correction Loop ── -->
+  <rect x="730" y="290" width="160" height="90" rx="8" fill="#231c1c" stroke="#f0883e" stroke-width="1.5"/>
+  <rect x="730" y="290" width="160" height="18" rx="8" fill="#f0883e" opacity="0.25"/>
+  <text x="810" y="304" text-anchor="middle" fill="#ffa657" font-size="10" font-weight="600">SELF-CORRECTION LOOP</text>
+  <text x="810" y="321" text-anchor="middle" fill="#c9d1d9" font-size="9">stderr → hypothesis → fix</text>
+  <text x="810" y="334" text-anchor="middle" fill="#c9d1d9" font-size="9">re-run on tool failure</text>
+  <text x="810" y="347" text-anchor="middle" fill="#8b949e" font-size="9">verify → retry → escalate</text>
+  <text x="810" y="360" text-anchor="middle" fill="#8b949e" font-size="9">max 3 iterations / step</text>
+
+  <!-- ── NODE 7a: IR Report ── -->
+  <rect x="925" y="135" width="145" height="58" rx="8" fill="#1c2318" stroke="#3fb950" stroke-width="1.5"/>
+  <rect x="925" y="135" width="145" height="16" rx="8" fill="#3fb950" opacity="0.25"/>
+  <text x="997" y="147" text-anchor="middle" fill="#56d364" font-size="10" font-weight="600">IR REPORT</text>
+  <text x="997" y="163" text-anchor="middle" fill="#c9d1d9" font-size="9">reports/*.md</text>
+  <text x="997" y="176" text-anchor="middle" fill="#8b949e" font-size="9">timeline · IOCs · findings</text>
+
+  <!-- ── NODE 7b: Exports ── -->
+  <rect x="925" y="208" width="145" height="58" rx="8" fill="#1c2318" stroke="#3fb950" stroke-width="1.5"/>
+  <rect x="925" y="208" width="145" height="16" rx="8" fill="#3fb950" opacity="0.25"/>
+  <text x="997" y="220" text-anchor="middle" fill="#56d364" font-size="10" font-weight="600">EXPORTS</text>
+  <text x="997" y="236" text-anchor="middle" fill="#c9d1d9" font-size="9">exports/*.csv  *.json</text>
+  <text x="997" y="249" text-anchor="middle" fill="#8b949e" font-size="9">netstat · mft · evtx</text>
+
+  <!-- ── NODE 7c: YARA Hits ── -->
+  <rect x="925" y="281" width="145" height="58" rx="8" fill="#1c2318" stroke="#3fb950" stroke-width="1.5"/>
+  <rect x="925" y="281" width="145" height="16" rx="8" fill="#3fb950" opacity="0.25"/>
+  <text x="997" y="293" text-anchor="middle" fill="#56d364" font-size="10" font-weight="600">YARA / IOC HITS</text>
+  <text x="997" y="309" text-anchor="middle" fill="#c9d1d9" font-size="9">analysis/yara_hits.txt</text>
+  <text x="997" y="322" text-anchor="middle" fill="#8b949e" font-size="9">STUN · msedge · pssdnsvc</text>
+
+  <!-- ─── ARROWS ─── -->
+  <!-- 1 → 2 -->
+  <line x1="170" y1="171" x2="205" y2="171" stroke="#388bfd" stroke-width="2" marker-end="url(#arr-blue)"/>
+
+  <!-- 2 → 3a -->
+  <line x1="345" y1="155" x2="380" y2="151" stroke="#3fb950" stroke-width="1.5" marker-end="url(#arr-green)"/>
+  <!-- 2 → 3b -->
+  <line x1="345" y1="171" x2="380" y2="221" stroke="#3fb950" stroke-width="1.5" marker-end="url(#arr-green)"/>
+  <!-- 2 → 3c -->
+  <line x1="345" y1="185" x2="380" y2="291" stroke="#3fb950" stroke-width="1.5" marker-end="url(#arr-green)"/>
+  <!-- 2 → 3d -->
+  <line x1="345" y1="200" x2="380" y2="361" stroke="#3fb950" stroke-width="1.5" marker-end="url(#arr-green)"/>
+
+  <!-- 3 group → 4 (from midpoint of analysis tools) -->
+  <line x1="520" y1="151" x2="555" y2="230" stroke="#bc8cff" stroke-width="1.5" marker-end="url(#arr-purple)"/>
+  <line x1="520" y1="221" x2="555" y2="240" stroke="#bc8cff" stroke-width="1.5" marker-end="url(#arr-purple)"/>
+  <line x1="520" y1="291" x2="555" y2="250" stroke="#bc8cff" stroke-width="1.5" marker-end="url(#arr-purple)"/>
+  <line x1="520" y1="361" x2="555" y2="265" stroke="#bc8cff" stroke-width="1.5" marker-end="url(#arr-purple)"/>
+
+  <!-- 4 → 5 -->
+  <line x1="695" y1="235" x2="730" y2="210" stroke="#f78166" stroke-width="2" marker-end="url(#arr-red)"/>
+
+  <!-- 5 → 6 -->
+  <line x1="810" y1="260" x2="810" y2="290" stroke="#f0883e" stroke-width="2" marker-end="url(#arr-orange)"/>
+
+  <!-- 6 → 5 (feedback loop — curved left side) -->
+  <path d="M 730 335 C 700 335 700 205 730 205" fill="none" stroke="#f0883e" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arr-orange)"/>
+  <text x="690" y="278" text-anchor="middle" fill="#ffa657" font-size="9" transform="rotate(-90,690,278)">retry</text>
+
+  <!-- 5 → 7a -->
+  <line x1="890" y1="185" x2="925" y2="164" stroke="#56d364" stroke-width="1.5" marker-end="url(#arr-green2)"/>
+  <!-- 5 → 7b -->
+  <line x1="890" y1="205" x2="925" y2="237" stroke="#56d364" stroke-width="1.5" marker-end="url(#arr-green2)"/>
+  <!-- 6 → 7c -->
+  <line x1="890" y1="335" x2="925" y2="310" stroke="#56d364" stroke-width="1.5" marker-end="url(#arr-green2)"/>
+
+  <!-- 3 → 5 direct (raw artifacts) -->
+  <path d="M 520 248 C 600 248 660 205 730 195" fill="none" stroke="#bc8cff" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arr-purple)"/>
+
+  <!-- ─── ARROWHEAD MARKERS ─── -->
+  <defs>
+    <marker id="arr-blue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#388bfd"/>
+    </marker>
+    <marker id="arr-green" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#3fb950"/>
+    </marker>
+    <marker id="arr-green2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#56d364"/>
+    </marker>
+    <marker id="arr-purple" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#bc8cff"/>
+    </marker>
+    <marker id="arr-red" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#f78166"/>
+    </marker>
+    <marker id="arr-orange" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#f0883e"/>
+    </marker>
+  </defs>
+
+  <!-- ─── LEGEND ─── -->
+  <rect x="20" y="490" width="1060" height="100" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="550" y="507" text-anchor="middle" fill="#8b949e" font-size="10" font-weight="600" letter-spacing="1">LEGEND</text>
+
+  <!-- Legend items -->
+  <rect x="35" y="518" width="14" height="14" rx="3" fill="#1c2b3a" stroke="#388bfd" stroke-width="1.5"/>
+  <text x="55" y="529" fill="#c9d1d9" font-size="10">E01 Evidence (read-only)</text>
+
+  <rect x="200" y="518" width="14" height="14" rx="3" fill="#1c2b1c" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="220" y="529" fill="#c9d1d9" font-size="10">Mount / Output</text>
+
+  <rect x="345" y="518" width="14" height="14" rx="3" fill="#1e1c2b" stroke="#bc8cff" stroke-width="1.5"/>
+  <text x="365" y="529" fill="#c9d1d9" font-size="10">Forensic Tools</text>
+
+  <rect x="480" y="518" width="14" height="14" rx="3" fill="#2b1c1c" stroke="#f78166" stroke-width="1.5"/>
+  <text x="500" y="529" fill="#c9d1d9" font-size="10">ML Anomaly Scorer</text>
+
+  <rect x="640" y="518" width="14" height="14" rx="3" fill="#1c2318" stroke="#56d364" stroke-width="2"/>
+  <text x="660" y="529" fill="#c9d1d9" font-size="10">Claude Code Agent</text>
+
+  <rect x="800" y="518" width="14" height="14" rx="3" fill="#231c1c" stroke="#f0883e" stroke-width="1.5"/>
+  <text x="820" y="529" fill="#c9d1d9" font-size="10">Self-Correction Loop</text>
+
+  <!-- dashed = passthrough label -->
+  <line x1="35" y1="556" x2="65" y2="556" stroke="#bc8cff" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="72" y="560" fill="#8b949e" font-size="10">raw artifact passthrough (CSV/JSON)</text>
+
+  <line x1="300" y1="556" x2="330" y2="556" stroke="#f0883e" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="337" y="560" fill="#8b949e" font-size="10">feedback / retry path</text>
+
+  <text x="700" y="560" fill="#8b949e" font-size="10">All evidence paths: read-only · Outputs → ./exports/  ./reports/</text>
+
+  <!-- ─── VERSION STAMP ─── -->
+  <text x="1080" y="612" text-anchor="end" fill="#30363d" font-size="9">SIFT-Analyst v1.0 · FOR508 · 2026-05-26</text>
+
+</svg>
